@@ -1,17 +1,25 @@
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
-@import 'libs/skel';
 
 /*
-	Lens by HTML5 UP
+	Big Picture by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Thumbnails */
+/* Loader */
 
-	#thumbnails {
+	body {
+		&:before,
+		&:after {
+			display: none !important;
+		}
+	}
+
+/* Gallery */
+
+	.gallery {
 		&:after {
 			content: '';
 			display: block;
@@ -23,20 +31,24 @@
 		}
 	}
 
-/* Viewer */
+/* Main */
 
-	#viewer {
-		.inner {
-			box-shadow: inset 0 0 9em 2em rgba(16,16,16,0.2);
-
-			&:before {
-				display: none;
-			}
+	.main {
+		&.fullscreen {
+			min-height: 0;
 		}
 
-		.slide {
-			.caption {
-				background-color: rgba(16,16,16,0.5);
+		&.style1 {
+			> .content {
+				margin: 0 auto;
 			}
+		}
+	}
+
+/* Poptrox */
+
+	.poptrox-popup {
+		.loader {
+			display: none !important;
 		}
 	}
